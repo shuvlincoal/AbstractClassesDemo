@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleUI
 {
@@ -10,29 +7,21 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            /*
-             * Todo follow all comments!! 
-             */
-
-
-            List<Vehicle> vehicles = new List<Vehicle>();
-
+            List<Vehicle> transportationList = new List<Vehicle>();
 
             Car car1 = new Car() { Make = "Ferrari", Model = "Fire", Year = 1960 };
             Motorcycle cycle1 = new Motorcycle() { Make = "Volkswagen", Model = "Beetle", Year = 1955 };
             Vehicle vehicle1 = new Car() { Make = "Ford", Model = "Cobra", Year = 1960,  Transmission = "Manual", RoofRack = false };
             Vehicle vehicle2 = new Motorcycle() { EngineCC = 900, KickStart = true };
 
-
-
-            vehicles.Add(car1);
-            vehicles.Add(cycle1);
-            vehicles.Add(vehicle1);
-            vehicles.Add(vehicle2);
+            transportationList.Add(car1);
+            transportationList.Add(cycle1);
+            transportationList.Add(vehicle1);
+            transportationList.Add(vehicle2);
 
             /*Using a foreach loop iterate over each of the properties [done]
  */
-            foreach (Vehicle transPort in vehicles)
+            foreach (Vehicle transPort in transportationList)
             {
                 Console.WriteLine($"Specs: {transPort.Year}");
                 Console.WriteLine($"Specs: {transPort.Make}");
@@ -41,13 +30,12 @@ namespace ConsoleUI
                 transPort.DriveAbstract();
                 Console.WriteLine("--Press Return To See More-----------------");
                 Console.ReadLine();
-
             }
             Console.WriteLine($"Thanks for visiting our Car lot, press return to exit> ");
             Console.WriteLine("-------------------\n\n\n");
             Console.ReadLine();
 
-            #region Vehicles
+            #region Vehicles Lab Instructions
 
             /*
              * Create an abstract class called Vehicle
@@ -64,7 +52,7 @@ namespace ConsoleUI
              * Only in the Motorcycle class will you override the virtual drive method
             */
 
-            // Create a list of Vehicle called vehicles
+            // Create a list of Vehicle called transportationList
 
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
@@ -73,7 +61,7 @@ namespace ConsoleUI
              */
 
             /*
-             * Add the 4 vehicles to the list
+             * Add the 4 transportationList to the list
              * Using a foreach loop iterate over each of the properties
              */
 
